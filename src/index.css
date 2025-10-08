@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark-card {
+  @apply bg-gray-800 border border-gray-700 rounded-xl shadow-lg;
+}
+
+.dark-input {
+  @apply bg-gray-800 border-gray-700 text-white focus:ring-[#006400] focus:border-[#006400];
+}
+
+.dark-table {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark-table th {
+  @apply bg-[#006400] text-white;
+}
+
+.dark-table td {
+  @apply border-gray-700 text-gray-200;
+}

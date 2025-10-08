@@ -49,30 +49,30 @@ export default function Layout({ children, yearLevel }: LayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9]">
-      <div className="fixed top-0 left-0 right-0 bg-white shadow-sm z-40 border-b border-gray-200">
+    <div className="min-h-screen bg-gray-900">
+      <div className="fixed top-0 left-0 right-0 bg-gray-800 shadow-lg z-40 border-b-2 border-[#006400]">
         <div className="flex items-center justify-between px-4 py-4">
           <div className="flex items-center">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-700 transition text-white"
             >
               {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-            <h1 className="text-xl font-bold text-[#006400] ml-2">{yearTitle}</h1>
+            <h1 className="text-xl font-bold text-[#00A86B] ml-2">{yearTitle}</h1>
           </div>
 
           <div className="flex items-center gap-3">
             <button
               onClick={() => navigate('/dashboard')}
-              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+              className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition"
             >
               <Home className="w-5 h-5" />
               <span className="hidden sm:inline">Accueil</span>
             </button>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition"
+              className="flex items-center gap-2 px-4 py-2 text-red-400 hover:bg-red-900/30 rounded-lg transition"
             >
               <LogOut className="w-5 h-5" />
               <span className="hidden sm:inline">Déconnexion</span>
@@ -82,7 +82,7 @@ export default function Layout({ children, yearLevel }: LayoutProps) {
       </div>
 
       <aside
-        className={`fixed top-16 left-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 z-30 lg:translate-x-0 ${
+        className={`fixed top-16 left-0 bottom-0 w-64 bg-gray-800 border-r-2 border-[#006400] shadow-lg transform transition-transform duration-300 z-30 lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -100,7 +100,7 @@ export default function Layout({ children, yearLevel }: LayoutProps) {
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition ${
                   isActive
                     ? 'bg-[#006400] text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    : 'text-gray-300 hover:bg-gray-700'
                 }`}
               >
                 <Icon className="w-5 h-5" />
